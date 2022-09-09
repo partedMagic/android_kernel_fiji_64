@@ -938,22 +938,6 @@ int ccu_flushLog(int argc, int *argv)
 	return 0;
 }
 
-int ccu_read_info_reg(int regNo)
-{
-	int *offset;
-
-	if (regNo < 0 || regNo >= 32) {
-		LOG_ERR("invalid regNo");
-		return 0;
-	}
-
-	offset = (int *)(uintptr_t)(ccu_base + 0x60 + regNo * 4);
-
-	LOG_DBG("%s: %x\n", __func__, (unsigned int)(*offset));
-
-	return *offset;
-}
-
 int ccu_query_power_status(void)
 {
 	return ccuInfo.IsCcuPoweredOn;
