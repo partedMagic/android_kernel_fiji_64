@@ -220,6 +220,8 @@ enum power_supply_property {
 	POWER_SUPPLY_PROP_MODEL_NAME,
 	POWER_SUPPLY_PROP_MANUFACTURER,
 	POWER_SUPPLY_PROP_SERIAL_NUMBER,
+        /* common kernel/modules dependency */
+	POWER_SUPPLY_PROP_CHARGING_ENABLE_ADC,
 };
 
 enum power_supply_type {
